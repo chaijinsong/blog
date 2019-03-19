@@ -1,2 +1,2 @@
 # keep
-take notes 记录
+内容才是博客的灵魂
