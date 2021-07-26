@@ -23,6 +23,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
+git config --global user.name "chaijinsong"
 git push -f git@github.com:chaijinsong/chaijinsong.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
