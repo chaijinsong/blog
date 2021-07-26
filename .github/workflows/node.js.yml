@@ -30,4 +30,4 @@ jobs:
       run: |
         npm install
     - name: deploy to chaijinsong.github.io
-      run: ./deploy.sh
+      run: sudo ./deploy.sh
