@@ -22,9 +22,10 @@ git init
 git add .
 git commit -m 'deploy'
 
-git remote add origin https://github.com/chaijinsong/chaijinsong.github.io.git
 git config --global user.email "15035806407@163.com"
 git config --global user.name "chaijinsong"
+
+git remote add origin https://github.com/chaijinsong/chaijinsong.github.io.git
 
 # 如果发布到 https://<USERNAME>.github.io
 git push origin master -f
