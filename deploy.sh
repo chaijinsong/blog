@@ -26,6 +26,7 @@ git add .
 git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
+git push -f
 # git push -f https://github.com/chaijinsong/chaijinsong.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
