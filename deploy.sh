@@ -19,8 +19,9 @@ echo $Cur_Dir
 # echo 'www.example.com' > CNAME
 
 git init
-git config --global user.email "15035806407@163.com"
-git config --global user.name "chaijinsong"
+git config --global user.email 15035806407@163.com
+git config --global user.name chaijinsong
+git config --global user.password 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
 
 git add .
 git commit -m 'deploy'
