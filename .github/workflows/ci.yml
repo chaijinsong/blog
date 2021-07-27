@@ -16,6 +16,9 @@ jobs:
         run: |
           npm install
           npm run docs:build
+      
+      - name: fix 403问题 # 解决这个问题fatal: unable to access 'https://github.com/chaijinsong/chaijinsong.github.io.git/': The requested URL returned error: 403
+        run: |
           git config --local --unset-all "http.https://github.com/.extraheader"
 
       - name: Deploy # 将打包内容发布到 github page
