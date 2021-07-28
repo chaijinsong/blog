@@ -26,7 +26,7 @@ jobs:
         with:  # 自定义环境变量
           ACCESS_TOKEN: ${{ secrets.BLOG_SECRET }} # VUE_ADMIN_TEMPLATE 是我的 secret 名称，需要替换成你的
           BRANCH: master
-          FOLDER: docs
+          FOLDER: 'docs/.vuepress/dist'
           REPOSITORY_NAME: chaijinsong/chaijinsong.github.io # 这是我的 github page 仓库
 #           TARGET_FOLDER: github-actions-demo # 打包的文件将放到静态服务器 github-actions-demo 目录下
 # 参考链接https://woai3c.gitee.io/introduction-to-front-end-engineering/06.html#github-actions-%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8
