@@ -4,16 +4,21 @@ module.exports = {
   themeConfig: {// 主题设置
     nav: [// 导航栏
       {
-        text: '概述',
+        text: '首页',
         link: '/'
-      }, {
-        text: 'Vue',
-        link: '/guide/vue/'
-        // items: [
-        //   { text: '笔记', link: '/guide/foo/one' }, // 可不写后缀 .md
-        //   { text: '其它链接', link: 'https://www.baidu.com/' }// 外部链接
-        // ]
       },
+      {
+        text: '浏览器',
+        link: '/guide/browser/'
+      },
+      // {
+      //   text: 'Vue',
+      //   link: '/guide/vue/'
+      //   // items: [
+      //   //   { text: '笔记', link: '/guide/foo/one' }, // 可不写后缀 .md
+      //   //   { text: '其它链接', link: 'https://www.baidu.com/' }// 外部链接
+      //   // ]
+      // },
       // {
       //   text: 'Typescript 学习笔记',
       //   items: [
@@ -23,9 +28,7 @@ module.exports = {
       // }
     ],
     sidebar: {//左侧列表
-      // '/guide/bar/': [
-      //   'four', 'three'
-      // ],
+      '/guide/browser/': ['browser_request_limit'],
       // '/guide/foo/': [
       //   {
       //     title: 'Typescript 学习',
