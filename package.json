@@ -12,5 +12,8 @@
   "devDependencies": {
     "vuepress": "^1.8.2"
   },
-  "homepage": "https://chaijinsong.github.io"
+  "homepage": "https://chaijinsong.github.io",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
