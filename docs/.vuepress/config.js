@@ -7,6 +7,17 @@ module.exports = {
         text: '浏览器',
         link: '/browser/'
       },
+      {
+        text: '算法',
+        link: '/algo/'
+      },
+      {
+        text: 'JS',
+        link: '/js/',
+        // items: [
+        //   { text: '原生函数实现', link: '/call' }, // 可不写后缀 .md
+        // ]
+      },
       // {
       //   text: 'Vue',
       //   link: '/guide/vue/'
@@ -25,13 +36,13 @@ module.exports = {
     ],
     sidebar: {//左侧列表
       '/browser/': ['browser_request_limit'],
-      // '/guide/foo/': [
-      //   {
-      //     title: 'Typescript 学习',
-      //     collapsable: true,
-      //     children: ['one', 'two']
-      //   }
-      // ],
+      '/js/': [
+        {
+          title: '原生函数实现',
+          collapsable: true,
+          children: ['call']
+        }
+      ],
       // '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用 
     }
   }
