@@ -1,1 +1,1 @@
-# 首页
+<img :src="$withBase('/root/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg')" alt="">

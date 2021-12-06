@@ -1,15 +1,11 @@
 module.exports = {
-  title: '劲松',
-  description: '劲松的blog，前端技术、vue、react、node等',
+  title: '知识图谱',
+  description: '柴劲松的知识图谱',
   themeConfig: {// 主题设置
     nav: [// 导航栏
       {
-        text: '首页',
-        link: '/'
-      },
-      {
         text: '浏览器',
-        link: '/guide/browser/'
+        link: '/browser/'
       },
       // {
       //   text: 'Vue',
@@ -28,7 +24,7 @@ module.exports = {
       // }
     ],
     sidebar: {//左侧列表
-      '/guide/browser/': ['browser_request_limit'],
+      '/browser/': ['browser_request_limit'],
       // '/guide/foo/': [
       //   {
       //     title: 'Typescript 学习',
