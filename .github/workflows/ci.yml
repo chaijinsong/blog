@@ -14,7 +14,7 @@ jobs:
 
       - name: Install and Build # 下载依赖 打包项目
         run: |
-          npm install
+          npm install --registry=https://registry.npmjs.org
           npm run docs:build
       
       - name: fix 403问题 # 解决这个问题fatal: unable to access 'https://github.com/chaijinsong/chaijinsong.github.io.git/': The requested URL returned error: 403
