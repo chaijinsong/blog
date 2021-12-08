@@ -114,8 +114,41 @@ fn._call(obj, '我的', '名字', '是')
 上面两步基本实现了`call`函数的修改`this`指向和支持传参的功能，但是有两点还没考虑完全
 1. 如果传入的第一个参数是一个基础数据类型，需要转成对应的包装类型
 2. 目前给设置的属性名是固定的`fn`，但是如果传入的`obj`自身就有`fn`属性，那么调用`_call`时会将其覆盖
+```js
+var name = '张三';
+var obj = {
+    name: '李四'
+};
 
+function fn(a, b, c) {
+    console.log(a + b + c + this.name);
+};
 
+Function.prototype._call = function(obj) {
+    if (typeof obj === 'string') {
+        obj = String(obj)
+    } else if (typeof obj === 'number') {
+        obj = Number(obj)
+    } else if (typeof obj === 'boolean') {
+        obj = Boolean(obj)
+    }
+
+    obj = obj ? obj : window || global; // 如果传入的null或者undefined，则obj为window或global
+
+    var args = []
+    for (let i = 1; i < arguments.length; i++) {
+        args.push("arguments[" + i + "]")
+    }
+    let randomFn = 'fn' + new Date().getTime()
+    obj[randomFn] = this
+    
+    var res = eval("obj[randomFn](" + args + ")")
+    delete obj[randomFn]
+    return res
+}
+fn._call(obj, '我的', '名字', '是')
+```
+至此call函数的实现就完成了
 
 
 
