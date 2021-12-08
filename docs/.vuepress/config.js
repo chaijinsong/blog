@@ -40,7 +40,7 @@ module.exports = {
         {
           title: '原生函数实现',
           collapsable: true,
-          children: ['call']
+          children: ['call_apply']
         }
       ],
       // '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用 

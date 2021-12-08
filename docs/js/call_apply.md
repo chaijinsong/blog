@@ -1,4 +1,4 @@
-# call
+# call和apply
 
 ### quickStart
 > 简介：Function.prototype.call()使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数，函数中的this指向call函数的第一个参数
@@ -150,7 +150,42 @@ fn._call(obj, '我的', '名字', '是')
 ```
 至此call函数的实现就完成了
 
+### 实现apply函数
+上面已经实现了call函数了，apply函数和call函数区别就是参数格式不同，其他都是一样的，所以直接上代码
+```js
+var name = '张三';
+var obj = {
+    name: '李四'
+};
 
+function fn(a, b, c) {
+    console.log(a + b + c + this.name);
+};
+
+Function.prototype._apply = function(obj, arr) {
+    if (typeof obj === 'string') {
+        obj = String(obj)
+    } else if (typeof obj === 'number') {
+        obj = Number(obj)
+    } else if (typeof obj === 'boolean') {
+        obj = Boolean(obj)
+    }
+
+    obj = obj ? obj : window || global; // 如果传入的null或者undefined，则obj为window或global
+
+    var args = []
+    for (let i = 0; i < arr.length; i++) {
+        args.push("arr[" + i + "]")
+    }
+    let randomFn = 'fn' + new Date().getTime()
+    obj[randomFn] = this
+    
+    var res = eval("obj[randomFn](" + args + ")")
+    delete obj[randomFn]
+    return res
+}
+fn._apply(obj, ['我的', '名字', '是'])
+```
 
 
 
